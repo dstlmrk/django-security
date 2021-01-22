@@ -27,8 +27,8 @@ from security.models import CommandLog, InputLoggedRequest, OutputLoggedRequest,
 from ansi2html import Ansi2HTMLConverter
 
 
-def display_json(value):
-    return json.dumps(value, indent=4, ensure_ascii=False, cls=DjangoJSONEncoder)
+def display_json(value, indent=4):
+    return json.dumps(value, indent=indent, ensure_ascii=False, cls=DjangoJSONEncoder)
 
 
 def display_as_code(value):
